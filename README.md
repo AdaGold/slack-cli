@@ -7,9 +7,11 @@
 
 ## Introduction
 
-Set any context/content that needs to be introduced. Examples include:
-- Adagrams needed an introduction to anagrams and game shows
-- Exquisite React needed an introduction to Exquisite Corpse
+To practice working with APIs, we will utilize the API for a tool with which you already very familiar: Slack!
+
+The application we build this week will be designed for humans to use. This means the format will be familiar to us, but it seems a little silly - why would you use the command line when you could just use the app?
+
+However, there are many places where you might want to use slack, where it doesn't make sense to have a human in the loop. For example, you might set up a continuous integration tool like [Travis CI](https://travis-ci.org/) to run your tests automatically whenever you submit a pull request. Travis has the ability to post in your Slack channel when the tests are done, using the Slack API in a way similar to the way we will in this project.
 
 ## Learning Goals
 
@@ -20,7 +22,10 @@ Set any context/content that needs to be introduced. Examples include:
 
 ## Objective
 
-We will write a complete command-line application that interacts with Slack. This application will allow a user to list users and channels, see details about a user or channel, and send a message to a user or channel.
+We will write a complete command-line application that interacts with Slack. This application will be able to:
+- List users and channels
+- See details about a user or channel
+- Send a message to a user or channel
 
 ## Getting Started
 
