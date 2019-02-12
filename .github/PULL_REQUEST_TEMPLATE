@@ -8,6 +8,7 @@ Question | Answer
 ---      | ---
 How did you go about exploring the Slack API? Did you learn anything that would be useful for your next project involving an API? | 
 Give a short summary of the _request/response cycle_. Where does your program fit into that scheme? | 
+Did you need to make any changes to the design work we did in class? If so, what were they? | 
 What _composition_ relations exist between classes in your implementation? | 
 What _inheritance_ relations exist between classes in your implementation? | 
 Did you use any of the _inheritance idioms_ we've talked about in class? How? | 
