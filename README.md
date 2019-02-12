@@ -147,10 +147,14 @@ As a user at the input prompt...
 
 ## Optional Enhancements
 
-Sometimes there are a list of optional enhancements that aren't necessarily in the form of a wave, but a list:
+Don't even think about reading these until all the primary requirements are complete.
 
-- Lorem ipsum
-- Dolor sit amet
+- As a user, I can change global settings for the program
+  - These settings include the username for the bot and an emoji to use as an icon
+  - When I change these settings, the program should save them in the JSON format in a file named `bot-settings.json`. When I restart the program, it should reload those settings.
+- As a user, I can see a history of messages sent to the currently selected recipient. If I change recipients, the message list should also change.
+
+If you're done with all that, read through the list of other endpoints for the Slack API, find one that does something interesting, and add it to your program!
 
 ## What Instructors Are Looking For
 Check out the [feedback template](feedback.md) which lists the items instructors will be looking for as they evaluate your project.
