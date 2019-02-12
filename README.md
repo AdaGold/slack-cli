@@ -29,25 +29,31 @@ We will write a complete command-line application that interacts with Slack. Thi
 
 ## Getting Started
 
-This section sometimes has subheaders (h3) about different components that need to be set up, read through, and/or understood before beginning. Some examples include:
+### Scaffolding
 
-- Directions about reading through the waves
-- Explanation about the scaffolded code
-- Suggestions about making a strategy
+We have provided you with our standard Ruby project setup:
+- `lib` and `specs` folders
+- A `Rakefile`
+- `specs/test_helper.rb` setup to use minitest, simplecov and VCR
+- A `.gitignore` file
 
-It could also include one-time instructions or commands to keep handy, such as:
+Other than this environment, there is no pre-built code for this project. All the project code and all the tests are up to you to create!
 
-- Clone the repo
-- Install via ...
-- Seed the database via ...
-- Run the project via ...
-- Run tests via ...
+### Setup
 
-For example, Adagrams has the following h3s:
+This is a pair project, so you and your pair should:
 
-- Tests
-- Pair Programming
-- Driver Code
+1. High-five
+1. Choose **one** person to fork this repository in GitHub
+1. Add the person who **didn't** fork the repository as a [collaborator](https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/).
+1. Both individuals will clone the forked repo: `$ git clone [YOUR FORKED REPO URL]`
+
+### Documentation
+
+Since you'll be working with an external API, it will be good to have the documentation handy. The three endpoints this project will use are:
+- [channels.list](https://api.slack.com/methods/channels.list)
+- [users.list](https://api.slack.com/methods/users.list)
+- [chat.postMessage](https://api.slack.com/methods/chat.postMessage)
 
 ## Setup Requirements
 
