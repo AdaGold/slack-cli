@@ -100,37 +100,50 @@ If your tokens are set up correctly, each of you should be able to run this scri
 
 ## Implementation Requirements
 
-### Wave 1
+We will do an in-class design activity for this project. While you should read through these requirements before that exercise, we do not recommend beginning work until we have finished classroom work.
 
-Could have Wave 1 details. Ideally/depending on timing, details will be in User Story format ( As a < type of user >, I want < some goal > so that < some reason >. )
+### Wave 1 - Listing Channels and Users
 
-### Wave 2
+As a user, when I launch this program... 
 
-Could have Wave 2 details.
+- I should see information about how many channels and users were loaded
+- I should then be given three options for how to interact with the program:
+  - List users
+  - List channels
+  - Quit
 
-### Optional: Wave X
+As a user who is at the program's input prompt...
 
-Could have details about an optional wave.
+- When I type "list users", I should see a list of all the users in the Slack workspace. This list should include username, real name, and Slack ID.
+- When I type "list channels", I should see a list of all the channels for that workspace. This list should include the channel's name, topic, member count, and Slack ID.
+- When I type "quit", the program should exit.
+- After completing any command other than "quit", the program should reprint the list of commands and ask for another input.
 
-## Functional Requirements
+**Hint:** You may want to investigate the [Table Print gem](https://github.com/arches/table_print) to handle formatting tables.
 
-Based on where students are in the curriculum, projects will either have "Implementation Requirements" or "Functional Requirements"
+### Wave 2 - Selecting and Showing Details
 
-### Wave 1
+**Vocab:** channels and users are both _recipients_.
 
-Could have Wave 1 details. Ideally/depending on timing, details will be in User Story format ( As a < type of user >, I want < some goal > so that < some reason >. )
+As a user at the input prompt...
 
-### Wave 2
+- I should see three new options:
+  - Select user
+  - Select channel
+  - Details
+- When I type "select user", I should be able to supply a username or Slack ID. The corresponding user should be the "selected" recipient.
+- When I type "select channel", I should be able to supply a channel name or Slack ID. The corresponding channel should be the "selected" recipient.
+- For selecting both users and channels, if no user/channel has that name or ID, the program should let me know and return to the main command loop.
+- When I type "details", the program should print out details for the currently selected recipient. What information is printed depends on whether it's a channel or a user.
+  - If no recipient is currently selected, the program should let me know and return to the main command prompt.
 
-Could have Wave 2 details.
+### Wave 3 - Sending Messages
 
-### Optional: Wave X
+As a user at the input prompt...
 
-Could have details about an optional wave.
-
-## Non-Functional Requirements
-
-These requirements are not tied to features/feature-development.
+- I should see one new option: send message.
+- When I type "send message", if a recipient is selected the program should ask me to type out a message, which will be sent to that recipient.
+  - If no recipient is currently selected, the program should let me know and return to the main command prompt.
 
 ## Optional Enhancements
 
