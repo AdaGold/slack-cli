@@ -33,8 +33,9 @@ We will write a complete command-line application that interacts with Slack. Thi
 
 We have provided you with our standard Ruby project setup:
 - `lib` and `specs` folders
+  - `lib/main.rb` is the Ruby file you should use to run the program. There's a bit of code here already - do some research and find out what it does!
+  - `specs/test_helper.rb` setup to use minitest, simplecov and VCR
 - A `Rakefile`
-- `specs/test_helper.rb` setup to use minitest, simplecov and VCR
 - A `.gitignore` file
 
 Other than this environment, there is no pre-built code for this project. All the project code and all the tests are up to you to create!
