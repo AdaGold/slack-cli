@@ -1,4 +1,4 @@
-# Slack CLI
+# slack.rb
 ## What We're Looking For
 
 Feature | Feedback
