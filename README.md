@@ -109,16 +109,16 @@ As a user, when I launch this program...
 
 - I should see information about how many channels and users were loaded
 - I should then be given three options for how to interact with the program:
-  - List users
-  - List channels
-  - Quit
+  - `list users`
+  - `list channels`
+  - `quit`
 
 As a user who is at the program's input prompt...
 
-- When I type "list users", I should see a list of all the users in the Slack workspace. This list should include username, real name, and Slack ID.
-- When I type "list channels", I should see a list of all the channels for that workspace. This list should include the channel's name, topic, member count, and Slack ID.
-- When I type "quit", the program should exit.
-- After completing any command other than "quit", the program should reprint the list of commands and ask for another input.
+- When I type `list users`, I should see a list of all the users in the Slack workspace. This list should include username, real name, and Slack ID.
+- When I type `list channels`, I should see a list of all the channels for that workspace. This list should include the channel's name, topic, member count, and Slack ID.
+- When I type `quit`, the program should exit.
+- After completing any command other than `quit`, the program should reprint the list of commands and ask for another input.
 
 **Hint:** You may want to investigate the [Table Print gem](https://github.com/arches/table_print) to handle formatting tables.
 
@@ -128,22 +128,22 @@ As a user who is at the program's input prompt...
 
 As a user at the input prompt...
 
-- I should see three new options:
-  - Select user
-  - Select channel
-  - Details
-- When I type "select user", I should be able to supply a username or Slack ID. The corresponding user should be the "selected" recipient.
-- When I type "select channel", I should be able to supply a channel name or Slack ID. The corresponding channel should be the "selected" recipient.
+- I should see three additional options:
+  - `select user`: select a user as the current recipient
+  - `select channel`: select a channel as the current recipient
+  - `details`: show details on the current recipient
+- When I type `select user`, I should be able to supply a username or Slack ID. The corresponding user should be the "selected" recipient.
+- When I type `select channel`, I should be able to supply a channel name or Slack ID. The corresponding channel should be the "selected" recipient.
 - For selecting both users and channels, if no user/channel has that name or ID, the program should let me know and return to the main command loop.
-- When I type "details", the program should print out details for the currently selected recipient. What information is printed depends on whether it's a channel or a user.
+- When I type `details`, the program should print out details for the currently selected recipient. What information is printed depends on whether it's a channel or a user.
   - If no recipient is currently selected, the program should let me know and return to the main command prompt.
 
 ### Wave 3 - Sending Messages
 
 As a user at the input prompt...
 
-- I should see one new option: send message.
-- When I type "send message", if a recipient is selected the program should ask me to type out a message, which will be sent to that recipient.
+- I should see one additional option: `send message`.
+- When I type `send message`, if a recipient is selected the program should ask me to type out a message, which will be sent to that recipient.
   - If no recipient is currently selected, the program should let me know and return to the main command prompt.
 
 ## Optional Enhancements
