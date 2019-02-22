@@ -103,6 +103,23 @@ If your tokens are set up correctly, each of you should be able to run this scri
 
 We will do an in-class design activity for this project. While you should read through these requirements before that exercise, we do not recommend beginning work until we have finished classroom work.
 
+### Testing
+
+For this project, we have provided our standard test infrastructure:
+- A `specs/` folder containing a `test_helper.rb` file, including
+    - Minitest reporters
+    - Simplecov
+    - VCR
+- A `Rakefile`, allowing you to run tests via `rake test`
+- A `Guardfile`, allowing you to watch tests via `guard`
+
+You do not need to test your main command loop, or the user interaction portions of your app. However, **all other classes and helper methods should be thoroughly tested**. Here are some tips:
+
+- Follow TDD best practices (pseudocode, red, green, refactor)
+- Add tests for all code you write
+- Make sure all tests are green before pushing to GitHub
+- Make sure all tests are green after you pull
+
 ### Wave 1 - Listing Channels and Users
 
 As a user, when I launch this program... 
