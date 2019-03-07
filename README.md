@@ -165,7 +165,7 @@ As a user at the input prompt...
 
 ## Optional Enhancements
 
-Don't even think about reading these until all the primary requirements are complete.
+Don't even think about reading these until all the primary requirements are complete!
 
 - As a user, I can change global settings for the program
   - These settings include the username for the bot and an emoji to use as an icon
