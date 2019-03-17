@@ -44,3 +44,7 @@ With your partner, answer the following questions about the instructor design:
     - What are the pros and cons of each approach?
 - What surprised you about this design?
 - What questions do you have about this design?
+
+## Wrap-up
+
+We encourage you to use our design for this project, at least as a starting point. However, if there are changes you need to make, particularly things like helper methods or extra attributes, you are welcome to do so. It's your project, after all.
