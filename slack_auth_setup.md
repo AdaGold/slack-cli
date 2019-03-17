@@ -34,10 +34,10 @@ Your application should now be able to access Slack!
 
 ## Verification
 
-To verify that you've set up the slack token correctly, work with your partner to write a script that does the following:
+To verify that you've set up the Slack token correctly, work with your partner to write a script that does the following:
 
 1. Use the `dotenv` gem to load environment variables
-1. Use HTTParty to send a GET request to the [`channels.list` endpoint](https://api.slack.com/methods/channels.list)
+1. Use HTTParty to send a `GET` request to the [`channels.list` endpoint](https://api.slack.com/methods/channels.list)
 1. Check that the request completed successfully, and print relevant information to the console if it didn't
 1. Loop through the results and print out the name of each channel
 

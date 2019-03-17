@@ -11,7 +11,7 @@ To practice working with APIs, we will utilize the API for a tool with which you
 
 The application we build this week will be designed for humans to use. This means the format will be familiar to us, but it seems a little silly - why would you use the command line when you could just use the app?
 
-However, there are many places where you might want to use slack, where it doesn't make sense to have a human in the loop. For example, you might set up a continuous integration tool like [Travis CI](https://travis-ci.org/) to run your tests automatically whenever you submit a pull request. Travis has the ability to post in your Slack channel when the tests are done, using the Slack API in a way similar to the way we will in this project.
+However, there are many places where you might want to use Slack, where it doesn't make sense to have a human in the loop. For example, you might set up a continuous integration tool like [Travis CI](https://travis-ci.org/) to run your tests automatically whenever you submit a pull request. Travis has the ability to post in your Slack channel when the tests are done, using the Slack API in a way similar to the way we will in this project.
 
 ## Learning Goals
 
@@ -123,7 +123,7 @@ As a user at the input prompt...
 
 ## Optional Enhancements
 
-Don't even think about reading these until all the primary requirements are complete.
+Don't even think about reading these until all the primary requirements are complete!
 
 - As a user, I can change global settings for the program
   - These settings include the username for the bot and an emoji to use as an icon
