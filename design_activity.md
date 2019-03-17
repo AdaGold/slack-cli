@@ -26,6 +26,10 @@ Build a UML diagram with your partner.
 
 ![Instructor Design](images/instructor-design.png)
 
+Note that only public methods and attributes are shown.
+
+<!-- https://www.draw.io/#G15pbTY4VOpswPf_TqNqy7ea-PYsPUmg6L -->
+
 </details>
 
 With your partner, answer the following questions about the instructor design:
