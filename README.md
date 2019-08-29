@@ -32,9 +32,9 @@ We will write a complete command-line application that interacts with Slack. Thi
 ### Scaffolding
 
 We have provided you with our standard Ruby project setup:
-- `lib` and `specs` folders
+- `lib` and `test` folders
   - `lib/slack.rb` is the Ruby file you should use to run the program. There's a bit of code here already - do some research and find out what it does!
-  - `specs/test_helper.rb` setup to use minitest, simplecov and VCR
+  - `test/test_helper.rb` setup to use minitest, simplecov and VCR
 - A `Rakefile` and a `Guardfile`
 - A `.gitignore` file
 
@@ -64,7 +64,7 @@ We will do an in-class design activity for this project. While you should read t
 ### Testing
 
 For this project, we have provided our standard test infrastructure:
-- A `specs/` folder containing a `test_helper.rb` file, including
+- A `test/` folder containing a `test_helper.rb` file, including
     - Minitest reporters
     - Simplecov
     - VCR
