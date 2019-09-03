@@ -1,6 +1,6 @@
-guard :minitest, bundler: false, autorun: false, rubygems: false, test_folders: ['specs'] do
+guard :minitest, bundler: false, autorun: false, rubygems: false, test_folders: ['test'] do
   # with Minitest::Spec
-  watch(%r{^specs/(.*)_spec\.rb$})
-  watch(%r{^lib/(.+)\.rb$}) { |m| "specs/#{m[1]}_spec.rb" }
-  watch(%r{^specs/test_helper\.rb$}) { 'specs' }
+  watch(%r{^test/(.*)_test\.rb$})
+  watch(%r{^lib/(.+)\.rb$}) { |m| "test/#{m[1]}_test.rb" }
+  watch(%r{^test/test_helper\.rb$}) { 'test' }
 end
