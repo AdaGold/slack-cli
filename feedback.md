@@ -18,4 +18,7 @@ Inheritance model matches in-class activity |
 Inheritance idioms (abstract class, template methods, polymorphism) used appropriately | 
 Methods are used to break work down into simpler tasks | 
 Class and instance methods are used appropriately | 
+Tests written for User functionality | 
+Tests written for Channel Functionality | 
+Tests written for sending a message |
 **Overall** |
