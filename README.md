@@ -48,7 +48,11 @@ This is a pair project, so you and your pair should:
 1. Choose **one** person to fork this repository in GitHub
 1. Add the person who **didn't** fork the repository as a [collaborator](https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/).
 1. Both partners will clone the forked repo: `$ git clone [YOUR FORKED REPO URL]`
+1. One partner will create a [new Slack workspace](https://slack.com/get-started) and invite their partner.
 1. Both partners will follow the [Slack Auth Setup instructions](slack_auth_setup.md) to allow your program to talk to Slack.
+1. Save your Slack API token in a `.env` file and name your slack token `SLACK_TOKEN`.
+
+**Note: Make sure `.env` is in your `.gitignore` file!**
 
 ### Documentation
 
@@ -70,6 +74,8 @@ For this project, we have provided our standard test infrastructure:
     - VCR
 - A `Rakefile`, allowing you to run tests via `rake test`
 - A `Guardfile`, allowing you to watch tests via `guard`
+- Any tests involving a `User` should use the username `SlackBot`
+- Any tests involving a `Channel` should use the `#random` channel
 
 You do not need to test your main command loop, or the user interaction portions of your app. However, **all other classes and helper methods should be thoroughly tested**. Here are some tips:
 
