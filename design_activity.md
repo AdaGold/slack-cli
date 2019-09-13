@@ -44,6 +44,7 @@ With your partner, answer the following questions about the instructor design:
     - What are the pros and cons of each approach?
 - What surprised you about this design?
 - What questions do you have about this design?
+- What class(es) should `slack.rb` interact with? (hint: We want to minimize the number of classes it interacts with if possible.)
 
 ## Wrap-up
 
