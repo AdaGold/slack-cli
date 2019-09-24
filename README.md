@@ -50,7 +50,7 @@ This is a pair project, so you and your pair should:
 1. Both partners will clone the forked repo: `$ git clone [YOUR FORKED REPO URL]`
 1. One partner will create a [new Slack workspace](https://slack.com/get-started) and invite their partner.
 1. Both partners will follow the [Slack Auth Setup instructions](slack_auth_setup.md) to allow your program to talk to Slack.
-1. Save your Slack API token in a `.env` file and name your slack token `SLACK_TOKEN`. **Make sure to add a `filter_sensitive_data` to your [VCR configuration](https://github.com/Ada-Developers-Academy/textbook-curriculum/blob/master/02-intermediate-ruby/api-testing-vcr.md)**.
+1. Save your Slack API token in a `.env` file and name your slack token `SLACK_TOKEN`. **Make sure to add a `filter_sensitive_data` to your [VCR configuration](https://github.com/Ada-Developers-Academy/textbook-curriculum/blob/master/02-intermediate-ruby/api-testing-vcr.md#test-config)**.
 
 **Note: Make sure `.env` is in your `.gitignore` file!**
 
