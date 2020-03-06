@@ -9,9 +9,17 @@
 
 To practice working with APIs, we will utilize the API for a tool with which you already very familiar: Slack!
 
-The application we build this week will be designed for humans to use. This means the format will be familiar to us, but it seems a little silly - why would you use the command line when you could just use the app?
+Let's talk about how Slack is organized:
 
-However, there are many places where you might want to use Slack, where it doesn't make sense to have a human in the loop. For example, you might set up a continuous integration tool like [Travis CI](https://travis-ci.org/) to run your tests automatically whenever you submit a pull request. Travis has the ability to post in your Slack channel when the tests are done, using the Slack API in a way similar to the way we will in this project.
+| Concept/Term | Definition | Example |
+| --- | --- | --- |
+| Workspace | Every team/organization's "Slack" is actually a **Workspace.** A Workspace has many channels and has many users. | "Ada Cohort 13"
+| Channel | A named conversation topic within a Workspace. Users can send messages to channels. | `#general`, `#random`, and `#fur-babes`
+| User | A person who sends and reads messages within a Workspace. Users can send and receive messages directly to other users as Direct Messages | `@dee`, `@kaida`
+
+We will use the Slack API in order to let us list users and channels, get details on users and channels, and send messages to users or channels, all from a Ruby program.
+
+Why would we interact with Slack using its API, and not its web-app? There are many places where you might want to use Slack, where it doesn't make sense to have a human-friendly web-app in the loop. For example, you might set up a continuous integration tool like [Travis CI](https://travis-ci.org/) to run your tests automatically whenever you submit a pull request. Travis has the ability to post in your Slack channel when the tests are done, using the Slack API in a way similar to the way we will in this project.
 
 ## Learning Goals
 
@@ -26,6 +34,10 @@ We will write a complete command-line application that interacts with Slack. Thi
 - List users and channels
 - See details about a user or channel
 - Send a message to a user or channel
+
+To accomplish our goal, every pair will:
+1. Set up a new Slack Workspace, channels, and users just for this project
+2. Write Ruby code to interact with the users and channels from that workspace
 
 ## Getting Started
 
@@ -49,7 +61,7 @@ This is a pair project, so you and your pair should:
 1. Add the person who **didn't** fork the repository as a [collaborator](https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/).
 1. Both partners will clone the forked repo: `$ git clone [YOUR FORKED REPO URL]`
 1. One partner will create a [new Slack workspace](https://slack.com/get-started) and invite their partner.
-1. Both partners will follow the [Slack Auth Setup instructions](slack_auth_setup.md) to allow your program to talk to Slack.
+1. Follow [Ada's Slack Auth Setup instructions](slack_auth_setup.md) to allow your program to talk to Slack.
 1. Save your Slack API token in a `.env` file and name your slack token `SLACK_TOKEN`. **Make sure to add a `filter_sensitive_data` to your [VCR configuration](https://github.com/Ada-Developers-Academy/textbook-curriculum/blob/master/02-intermediate-ruby/api-testing-vcr.md#test-config)**.
 
 **Note: Make sure `.env` is in your `.gitignore` file!**
