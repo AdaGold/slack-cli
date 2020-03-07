@@ -61,11 +61,7 @@ Since you'll be working with an external API, it will be good to have the docume
 - [users.list](https://api.slack.com/methods/users.list)
 - [chat.postMessage](https://api.slack.com/methods/chat.postMessage)
 
-## Implementation Requirements
-
-We will do an in-class design activity for this project. While you should read through these requirements before that exercise, we do not recommend beginning work until we have finished classroom work.
-
-### Testing
+## Testing Requirements
 
 For this project, we have provided our standard test infrastructure:
 - A `test/` folder containing a `test_helper.rb` file, including
@@ -77,12 +73,58 @@ For this project, we have provided our standard test infrastructure:
 - Any tests involving a `User` should use the username `SlackBot`
 - Any tests involving a `Channel` should use the `#random` channel
 
-You do not need to test your main command loop, or the user interaction portions of your app. However, **all other classes and helper methods should be thoroughly tested**. Here are some tips:
+**Do not need to test your main command loop, or the user interaction portions of your app.** However, **all other classes and helper methods should be thoroughly tested**. Here are some tips:
 
 - Follow TDD best practices (pseudocode, red, green, refactor)
 - Add tests for all code you write
 - Make sure all tests are green before pushing to GitHub
 - Make sure all tests are green after you pull
+
+## Implementation Requirements
+
+### Wave 1: Setup `slack.rb` and `Workspace`
+
+Open `lib/slack.rb`. Read through it and answer these questions:
+
+1. What is going on in this file?
+2. How do we run this file?
+3. What does the line `workspace = Workspace.new` do?
+
+We want every project to have a `Workspace` class. To setup this class, do the following:
+
+1. Create `lib/workspace.rb` and create a class named `Workspace`
+1. The `initialize` should not take in any parameters
+1. Within `initialize`, the class should set up the instance variables `@users` and `@channels`. Set the value of `@users` to an empty array. Set the value of `@channels` to an empty array. Eventually, these should be refactored so that they are arrays of users or arrays of channels
+1. Set `attr_reader` for these two instance variables in `Workspace`
+1. Run `$ ruby lib/slack.rb` to make sure that the Ruby program runs without syntax errors. You probably should get
+1. With your pair, determine: What is the relationship between `Workspace` and a `User`? Is it inheritance or composition? Is-a or has-a or has-many? How do we know from the Ruby code?
+1. With your pair, determine: What is the relationship between `Workspace` and a `Channel`? Is it inheritance or composition? Is-a or has-a or has-many? How do we know from the Ruby code?
+
+### Wave 2: Setup `Recipient`, `User`, and `Channel`
+
+
+
+### Wave 1: `User` and users in `slack.rb`
+
+#### User Stories
+
+As a CLI user, when I launch this program using `$ ruby lib/slack.rb`... 
+- I should see information about how many channels and users are in this workspace
+- I should then be one option for how to interact with the program:
+  - `list users`
+
+As a CLI user who is at the program's input prompt...
+- When I type `list users`, I should see a list of all the users in this Slack workspace. For each user, I want to see the user's username, real name, and Slack ID.
+
+#### Design Requirements
+
+Implement the features for this wave with the following design requirements, along with our testing requirements:
+- Create a `User` class. There should be composition between `Workspace` and `User`; `Workspace` has many `User`s.
+- The `slack.rb` file should not create, call, or use the `User` class at all. The `slack.rb` file should mainly be interacting with the instance of `Workspace` created in the line `workspace = Workspace.new`. All `User`-related information that `slack.rb` receives should be returned from calling a method defined in the `Workspace` class.
+
+### Wave 3: Driver Code
+
+
 
 ### Wave 1 - Listing Channels and Users
 
