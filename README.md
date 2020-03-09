@@ -73,16 +73,16 @@ For this project, we have provided our standard test infrastructure:
 - Any tests involving a `User` should use the username `SlackBot`
 - Any tests involving a `Channel` should use the `#random` channel
 
-**Do not need to test your main command loop, or the user interaction portions of your app.** However, **all other classes and helper methods should be thoroughly tested**. Here are some tips:
+**Do not need to test your main command loop, or the user interaction portions of your app.** However, **all classes and helper methods should be thoroughly tested**. Here are some tips:
 
 - Follow TDD best practices (pseudocode, red, green, refactor)
 - Add tests for all code you write
 - Make sure all tests are green before pushing to GitHub
 - Make sure all tests are green after you pull
 
-## Implementation Requirements
+## Design Requirements
 
-### Wave 1: Setup `slack.rb` and `Workspace`
+### Setup `slack.rb` and `Workspace`
 
 Open `lib/slack.rb`. Read through it and answer these questions:
 
@@ -96,19 +96,21 @@ We want every project to have a `Workspace` class. To setup this class, do the f
 1. The `initialize` should not take in any parameters
 1. Within `initialize`, the class should set up the instance variables `@users` and `@channels`. Set the value of `@users` to an empty array. Set the value of `@channels` to an empty array. Eventually, these should be refactored so that they are arrays of users or arrays of channels
 1. Set `attr_reader` for these two instance variables in `Workspace`
-1. Run `$ ruby lib/slack.rb` to make sure that the Ruby program runs without syntax errors. You probably should get
+1. Run `$ ruby lib/slack.rb` to make sure that the Ruby program runs without syntax errors. If you get an error that says that `Workspace` is not defined, what line of code do you need to add to the top of `lib/slack.rb` in order to load another class?
 1. With your pair, determine: What is the relationship between `Workspace` and a `User`? Is it inheritance or composition? Is-a or has-a or has-many? How do we know from the Ruby code?
 1. With your pair, determine: What is the relationship between `Workspace` and a `Channel`? Is it inheritance or composition? Is-a or has-a or has-many? How do we know from the Ruby code?
 
-### Wave 2: Setup `Recipient`, `User`, and `Channel`
+### Design Activity
 
+Do this design activity to help set up the classes and overall project design.
 
+## Implementation Requirements
 
 ### Wave 1: `User` and users in `slack.rb`
 
 #### User Stories
 
-As a CLI user, when I launch this program using `$ ruby lib/slack.rb`... 
+As a CLI user, when I launch this program using `$ ruby lib/slack.rb`...
 - I should see information about how many channels and users are in this workspace
 - I should then be one option for how to interact with the program:
   - `list users`
@@ -128,7 +130,7 @@ Implement the features for this wave with the following design requirements, alo
 
 ### Wave 1 - Listing Channels and Users
 
-As a user, when I launch this program... 
+As a CLI user, when I launch this program using `$ ruby lib/slack.rb`...
 
 - I should see information about how many channels and users were loaded
 - I should then be given three options for how to interact with the program:
@@ -149,12 +151,15 @@ As a user who is at the program's input prompt...
 
 **Vocab:** channels and users are both _recipients_.
 
-As a user at the input prompt...
+As a CLI user, when I launch this program using `$ ruby lib/slack.rb`...
 
 - I should see three additional options:
   - `select user`: select a user as the current recipient
   - `select channel`: select a channel as the current recipient
   - `details`: show details on the current recipient
+
+As a user who is at the program's input prompt...
+
 - When I type `select user`, I should be able to supply a username or Slack ID. The corresponding user should be the "selected" recipient.
 - When I type `select channel`, I should be able to supply a channel name or Slack ID. The corresponding channel should be the "selected" recipient.
 - For selecting both users and channels, if no user/channel has that name or ID, the program should let me know and return to the main command loop.
@@ -163,9 +168,12 @@ As a user at the input prompt...
 
 ### Wave 3 - Sending Messages
 
-As a user at the input prompt...
+As a CLI user, when I launch this program using `$ ruby lib/slack.rb`...
 
 - I should see one additional option: `send message`.
+
+As a user who is at the program's input prompt...
+
 - When I type `send message`, if a recipient is selected the program should ask me to type out a message, which will be sent to that recipient.
   - If no recipient is currently selected, the program should let me know and return to the main command prompt.
 

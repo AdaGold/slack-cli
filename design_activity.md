@@ -10,19 +10,20 @@ While we encourage you to use the provided design for this project, there is muc
 - Compare and contrast different designs for the same program
 - Implement a program from a provided UML diagram
 
-## Your Design
+## First Draft Design
 
-Read through the project requirements with your partner, then follow our standard [object-oriented design process](https://github.com/Ada-Developers-Academy/textbook-curriculum/blob/master/02-intermediate-ruby/oo-design.md).
+1. Read through the project requirements with your partner, then follow our standard [object-oriented design process](https://github.com/Ada-Developers-Academy/textbook-curriculum/blob/master/02-intermediate-ruby/oo-design.md).
+    - What are the nouns, and how are they composed into objects and relations?
+    - What are the verbs, and which verb belongs with which object?
+2. From above, we are leading you to certain classes and dependencies. We want `lib/slack.rb` to have only **one dependency**: `Workspace`. We want `Workspace` to have at least two dependencies: `User` and `Channel`. We want `Workspace` to have many `User`s (composition). Also, we want `Workspace` to have many `Channel`s (composition). After reading through the requirements, what verbs are associated with `User`? What verbs are associated with `Channel`? What's **similar**? What's **different**?
+3. The `User` and `Channel` classes have similar enough verbs and responsibilities, that we could design them to have inheritance relationships. What ideas can you come up with? What would the common behaviors/methods be named?
 
-- What are the nouns, and how are they composed into objects and relations?
-- What are the verbs, and which verb belongs with which object?
+Create a rough UML diagram for your design's first draft.
 
-Build a UML diagram with your partner.
-
-## Instructor Design
+## Compare With Another Design
 
 <details>
-<summary>Once you are happy with your design, click here to see the UML from the instructor implementation</summary>
+<summary>Once you have a first draft of your design, click here to see the UML for one instructor implementation.</summary>
 
 ![Instructor Design](images/instructor-design.png)
 
@@ -32,19 +33,37 @@ Note that only public methods and attributes are shown.
 
 </details>
 
-With your partner, answer the following questions about the instructor design:
+### Reflect
 
+With your partner, answer the following questions about the above design:
+
+- What classes exist?
+  - Why? What are they named, what do they represent, and what state and behavior do they have?
 - What _composition_ relations exist between objects in this design?
 - What _inheritance_ relations exist between objects in this design?
-- How are the objects and the relations between objects, different than the design you and your partner came up with?
-    - Why do you imagine we did it this way?
-    - What are the pros and cons of each approach?
-- How are the methods and the placement of methods within objects different than the design you and your partner came up with?
-    - Why do you imagine we did it this way?
-    - What are the pros and cons of each approach?
-- What surprised you about this design?
-- What questions do you have about this design?
-- What class(es) should `slack.rb` interact with? (hint: We want to minimize the number of classes it interacts with if possible.)
+- What parts of this design inspires you, and you want to steal?
+- What parts of this design are you unsure about, and need to consider again later?
+- What parts of this design do you think you can do without?
+
+<details>
+
+  <summary>Final Design Question: What class(es) should `slack.rb` interact with/depend on?</summary>
+
+`slack.rb` should only interact with one class, `Workspace`.
+
+We want to minimize the number of classes it depends on if possible.
+
+The `slack.rb` file should not create, call, or use the `User`, `Channel`, or `Recipient` classes at all. The `slack.rb` file should mainly be interacting with the instance of `Workspace` created in the line `workspace = Workspace.new`. All `User`-related information that `slack.rb` receives should be returned from calling a method defined in the `Workspace` class.
+
+</details>
+
+### What If I Don't Understand The Design?
+
+There's a chance that there are things about this design that aren't very clear as to _why_ they are beneficial.
+
+1. If you're unsure about if you need users and channels to inherit from `Recipient`, try implementing the project without inheriting from `Recipient` first!
+    - Then, afterwards, check to see if you can refactor `User` and `Channel` to inherit from a new `Recipient` class. It will be more visible as to _why_ inheritance can be useful after users and channels have been built out, and you can see what the two classes have in common.
+1. If you're unsure about what some methods mean in our UML diagram (what does `get` do? Why is `self.list_all` a class method?), then try implementing the project without those method names first. Then, refactor your method names to see if they can match up with ours. Method names are hard; sometimes it's not very obvious what they're doing until you have to make a GET request. 😉
 
 ## Wrap-up
 
