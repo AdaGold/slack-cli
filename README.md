@@ -106,28 +106,6 @@ Do this design activity to help set up the classes and overall project design.
 
 ## Implementation Requirements
 
-### Wave 1: `User` and users in `slack.rb`
-
-#### User Stories
-
-As a CLI user, when I launch this program using `$ ruby lib/slack.rb`...
-- I should see information about how many channels and users are in this workspace
-- I should then be one option for how to interact with the program:
-  - `list users`
-
-As a CLI user who is at the program's input prompt...
-- When I type `list users`, I should see a list of all the users in this Slack workspace. For each user, I want to see the user's username, real name, and Slack ID.
-
-#### Design Requirements
-
-Implement the features for this wave with the following design requirements, along with our testing requirements:
-- Create a `User` class. There should be composition between `Workspace` and `User`; `Workspace` has many `User`s.
-- The `slack.rb` file should not create, call, or use the `User` class at all. The `slack.rb` file should mainly be interacting with the instance of `Workspace` created in the line `workspace = Workspace.new`. All `User`-related information that `slack.rb` receives should be returned from calling a method defined in the `Workspace` class.
-
-### Wave 3: Driver Code
-
-
-
 ### Wave 1 - Listing Channels and Users
 
 As a CLI user, when I launch this program using `$ ruby lib/slack.rb`...
