@@ -15,7 +15,11 @@ While we encourage you to use the provided design for this project, there is muc
 1. Read through the project requirements with your partner, then follow our standard [object-oriented design process](https://github.com/Ada-Developers-Academy/textbook-curriculum/blob/master/02-intermediate-ruby/oo-design.md).
     - What are the nouns, and how are they composed into objects and relations?
     - What are the verbs, and which verb belongs with which object?
-2. From above, we are leading you to certain classes and dependencies. We want `lib/slack.rb` to have only **one dependency**: `Workspace`. We want `Workspace` to have at least two dependencies: `User` and `Channel`. We want `Workspace` to have many `User`s (composition). Also, we want `Workspace` to have many `Channel`s (composition). After reading through the requirements, what verbs are associated with `User`? What verbs are associated with `Channel`? What's **similar**? What's **different**?
+2. From above, we are leading you to certain classes and dependencies. We want `lib/slack.rb` to have only **one dependency**: `Workspace`. We want `Workspace` to have at least two dependencies: `User` and `Channel`. We want `Workspace` to have many `User`s (composition). Also, we want `Workspace` to have many `Channel`s (composition). After reading through the requirements:
+  - What verbs are associated with `User`? 
+  - What verbs are associated with `Channel`? 
+  - What's **similar**? 
+  - What's **different**?
 3. The `User` and `Channel` classes have similar enough verbs and responsibilities, that we could design them to have inheritance relationships. What ideas can you come up with? What would the common behaviors/methods be named?
 
 Create a rough UML diagram for your design's first draft.
