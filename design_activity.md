@@ -20,7 +20,9 @@ While we encourage you to use the provided design for this project, there is muc
   - What verbs are associated with `Channel`? 
   - What's **similar**? 
   - What's **different**?
-3. The `User` and `Channel` classes have similar enough verbs and responsibilities, that we could design them to have inheritance relationships. What ideas can you come up with? What would the common behaviors/methods be named?
+3. The `User` and `Channel` classes have similar enough verbs and responsibilities, that we could design them to have inheritance relationships. 
+  - What ideas can you come up with? 
+  - What would the common behaviors/methods be named?
 
 Create a rough UML diagram for your design's first draft.
 
