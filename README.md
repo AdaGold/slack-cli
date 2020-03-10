@@ -116,9 +116,11 @@ We want every project to have a `Workspace` class. To setup this class, do the f
 
 ### Design Activity
 
-Do this design activity to help set up the classes and overall project design.
+[Do this design activity to help set up the classes and overall project design.](design_activity.md)
 
 ## Implementation Requirements
+
+Please make sure that you do the design activity before you write code!
 
 ### Wave 1 - Listing Channels and Users
 
