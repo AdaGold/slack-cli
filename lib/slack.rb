@@ -2,6 +2,7 @@
 
 def main
   puts "Welcome to the Ada Slack CLI!"
+  workspace = Workspace.new
 
   # TODO project
 
