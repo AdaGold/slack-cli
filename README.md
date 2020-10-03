@@ -71,9 +71,34 @@ This is a pair project, so you and your pair should:
 ### Documentation
 
 Since you'll be working with an external API, it will be good to have the documentation handy. The three endpoints this project will use are:
-- [channels.list](https://api.slack.com/methods/channels.list)
+- [conversations.list](https://api.slack.com/methods/conversations.list)
 - [users.list](https://api.slack.com/methods/users.list)
 - [chat.postMessage](https://api.slack.com/methods/chat.postMessage)
+
+#### **Scope**
+
+Pay close to the documentation where it lists the "scope" i.e. permissions, that you need to grant your application to use these endpoints.  You can grant scope by going to the **Basic Information** page for your registered Slack application and clicking on **Permissions**.
+
+![permissions link](images/permissions.png)
+
+For example with `users.list` you need to grant the following scope.
+
+- users:read
+
+You can see the scopes required in the documentation below.  
+
+![conversations.list permissions](images/users-list-scope.png)
+
+Also if you make a request and your app lacks the required scope you will get a response like the one below which lists the missing scopes.
+
+```json
+{
+    "ok": false,
+    "error": "missing_scope",
+    "needed": "users:read",
+    "provided": "channels:read"
+}
+```
 
 ## Testing Requirements
 
