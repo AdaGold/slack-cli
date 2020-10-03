@@ -2,8 +2,8 @@
 
 ## At a Glance
 
-- Individual, [stage 2](https://github.com/Ada-Developers-Academy/pedagogy/blob/master/classroom/rule-of-three.md#stage-2) project
-- Due 9AM Monday, *Mar 16*
+- Pair, [stage 2](https://github.com/Ada-Developers-Academy/pedagogy/blob/master/classroom/rule-of-three.md#stage-2) project
+- Due EOD Friday, *DATE HERE*
 
 ## Introduction
 
@@ -54,19 +54,19 @@ Other than this environment, there is no pre-built code for this project. All th
 
 ### Setup
 
+This is a pair project, so you and your pair should:
+
 1. High-five (or fist bump)
-1. Fork this repository in GitHub
-1. Clone the forked repo: `$ git clone [YOUR FORKED REPO URL]`
-1. Create a [new Slack workspace](https://slack.com/get-started).
-1. Follow [Ada's Slack Auth Setup instructions](slack_auth_setup.md) to allow your program to talk this Slack workspace.
+1. Choose **one** person to fork this repository in GitHub
+1. Add the person who **didn't** fork the repository as a [collaborator](https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/)
+1. Both partners will clone the forked repo: `$ git clone [YOUR FORKED REPO URL]`
+1. One partner will create a [new Slack workspace](https://slack.com/get-started) and invite their partner.
+1. Follow [Ada's Slack Auth Setup instructions](slack_auth_setup.md) to allow your program to talk to Slack.
 1. Save your Slack API token in a `.env` file and name your slack token `SLACK_TOKEN`.
 1. Add `.env` to your `.gitignore` file.
 1. **Add a `filter_sensitive_data` to your [VCR configuration](https://github.com/Ada-Developers-Academy/textbook-curriculum/blob/master/02-intermediate-ruby/api-testing-vcr.md#test-config) in `test/test_helper.rb`**.
 
 **Note: Make sure `.env` is in your `.gitignore` file!**
-
-Lastly, a note to **dear C13**:
-Start this project by following these exact setup directions and making your own individual Slack workspace. After a while, if you want to share a Slack workspace with others to help this project feel more collaborative, you may do so after you get started on the project.
 
 ### Documentation
 
