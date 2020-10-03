@@ -15,7 +15,7 @@ Let's talk about how Slack is organized:
 | --- | --- | --- |
 | Workspace | Every team/organization's "Slack" is actually a **Workspace.** A Workspace has many channels and has many users. | "Ada Cohort 13"
 | Channel | A named conversation topic within a Workspace. Users can send messages to channels. | `#general`, `#random`, and `#fur-babes`
-| User | A person who sends and reads messages within a Workspace. Users can send and receive messages directly to other users as Direct Messages | `@dee`, `@kaida`
+| User | A person who sends and reads messages within a Workspace. Users can send and receive messages directly to other users as Direct Messages | `@simon`, `@kaida`
 
 We will use the Slack API in order to let us list users and channels, get details on users and channels, and send messages to users or channels, all from a Ruby program.
 
