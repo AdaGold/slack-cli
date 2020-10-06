@@ -3,7 +3,7 @@
 ## At a Glance
 
 - Pair, [stage 2](https://github.com/Ada-Developers-Academy/pedagogy/blob/master/classroom/rule-of-three.md#stage-2) project
-- Due EOD Friday, *DATE HERE*
+- Due EOD Friday, *Oct 9th*
 
 ## Introduction
 
