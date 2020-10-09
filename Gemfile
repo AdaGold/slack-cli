@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 gem 'simplecov', '~> 0.19.0'
-
+gem 'table_print', '~> 1.5', '>= 1.5.7'
 gem 'rake'
 gem 'minitest'
 gem 'minitest-spec'
