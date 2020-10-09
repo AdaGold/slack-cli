@@ -10,4 +10,4 @@ gem 'minitest-skip'
 
 gem 'vcr', '~> 6.0'
 gem 'dotenv', '~> 2.7', '>= 2.7.6'
-gem 'httparty', '~> 0.13.7'
+gem 'httparty', '~> 0.17.3'
