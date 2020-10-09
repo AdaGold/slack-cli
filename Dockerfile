@@ -17,6 +17,7 @@ ADD $SUBMISSION_SUBFOLDER /app
 COPY ./Gemfile .
 RUN gem install bundler
 RUN bundle install
+RUN echo "SLACK_TOKEN=BOGUS" >> /app/.env  
 
 # Overwrite the script
 ADD test.sh /app
