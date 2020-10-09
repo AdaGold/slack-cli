@@ -16,7 +16,6 @@ ADD $SUBMISSION_SUBFOLDER /app
 
 COPY ./Gemfile .
 RUN gem install bundler
-RUN gem uninstall json -v 2.3.0
 RUN bundle install
 RUN echo "SLACK_TOKEN=BOGUS" >> /app/.env  
 
