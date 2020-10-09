@@ -6,7 +6,6 @@ gem 'rake'
 gem 'minitest'
 gem 'minitest-spec'
 gem 'minitest-reporters'
-gem "pry"
 gem 'minitest-skip'
 
 gem 'vcr', '~> 6.0'
