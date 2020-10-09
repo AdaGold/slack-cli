@@ -8,6 +8,7 @@ gem 'minitest-spec'
 gem 'minitest-reporters'
 gem 'minitest-skip'
 
+gem "pry"
 gem 'webmock', '~> 3.9', '>= 3.9.1'
 gem 'vcr', '~> 6.0'
 gem 'dotenv', '~> 2.7', '>= 2.7.6'
