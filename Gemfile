@@ -9,6 +9,6 @@ gem 'minitest-reporters'
 gem "pry"
 gem 'minitest-skip'
 
-gem 'vcr'
+gem 'vcr', '~> 6.0'
 gem 'dotenv', '~> 2.7', '>= 2.7.6'
 gem 'httparty', '~> 0.13.7'
